@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>SabiBiz - Dashboard</title>
+    <title>SabiBiz - Dashboard</title>
 
-  <style>
-    body { font-family: "Plus Jakarta Sans", sans-serif; }
-  </style>
-</head>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
 
-<body class="bg-gray-50 min-h-screen text-gray-900">
+  <body class="bg-gray-50 min-h-screen text-gray-900">
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-gray-200 px-6 py-4 flex justify-between items-center"
+    >
+      <h1 class="text-xl font-bold">
+        Sabi<span class="text-[#2606D2]">Biz</span>
+      </h1>
 
-  <!-- NAVBAR -->
-  <header class="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Sabi<span class="text-[#2606D2]">Biz</span></h1>
-
-    <a href="./login.html" class="text-sm font-medium text-red-500 hover:underline">Logout</a>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="px-6 py-6 max-w-4xl mx-auto">
-
-    <!-- OVERVIEW TITLE -->
-    <h2 class="text-2xl font-semibold mb-5">Dashboard Overview</h2>
-
-    <!-- SUMMARY CARDS -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-
-      <!-- Sales -->
-      <div class="bg-white p-5 rounded-xl shadow-sm border">
-        <p class="text-sm text-gray-500">Total Sales</p>
-        <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
-      </div>
-
-      <!-- Expenses -->
-      <div class="bg-white p-5 rounded-xl shadow-sm border">
-        <p class="text-sm text-gray-500">Total Expenses</p>
-        <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
-      </div>
-
-      <!-- Profit -->
-      <div class="bg-white p-5 rounded-xl shadow-sm border">
-        <p class="text-sm text-gray-500">Profit</p>
-        <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
-      </div>
-
-      <!-- Best Product -->
-      <div class="bg-white p-5 rounded-xl shadow-sm border">
-        <p class="text-sm text-gray-500">Best Selling Product</p>
-        <h3 class="text-xl font-semibold mt-1">None yet</h3>
-      </div>
-
-    </div>
-
-    <!-- QUICK ACTIONS -->
-    <h3 class="text-xl font-semibold mb-3">Quick Actions</h3>
-
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-
-      <a href="./pages/sales.html"
-         class="bg-[#2606D2] text-white py-4 rounded-xl text-center font-medium hover:opacity-90 transition">
-        Add Sale
+      <a
+        href="./login.html"
+        class="text-sm font-medium text-red-500 hover:underline"
+      >
+        Logout
       </a>
+    </header>
 
-      <a href="./add-expense.html"
-         class="border border-[#2606D2] text-[#2606D2] py-4 rounded-xl text-center font-medium hover:bg-[#2606D210] transition">
-        Add Expense
-      </a>
+    <!-- MAIN CONTENT -->
+    <main class="px-6 py-6 max-w-4xl mx-auto pt-28">
+      <!-- OVERVIEW TITLE -->
+      <h2 class="text-2xl font-semibold mb-5">Dashboard Overview</h2>
 
-      <a href="./chat-ai.html"
-         class="border border-gray-300 py-4 rounded-xl text-center font-medium hover:bg-gray-100 transition">
-        Ask AI Assistant
-      </a>
+      <!-- SUMMARY CARDS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <!-- Sales -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Total Sales</p>
+          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+        </div>
 
-    </div>
+        <!-- Expenses -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Total Expenses</p>
+          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+        </div>
 
-    <!-- RECENT ACTIVITY -->
-    <h3 class="text-xl font-semibold mb-3">Recent Activity</h3>
+        <!-- Profit -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Profit</p>
+          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+        </div>
 
-    <div class="bg-white rounded-xl p-5 shadow-sm border">
-      <p class="text-gray-500 text-center py-4">
-        No activity yet — start by adding a sale or expense.
-      </p>
-    </div>
+        <!-- Best Product -->
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Best Selling Product</p>
+          <h3 class="text-xl font-semibold mt-1">None yet</h3>
+        </div>
+      </div>
 
-  </main>
+      <!-- QUICK ACTIONS -->
+      <h3 class="text-xl font-semibold mb-3">Quick Actions</h3>
 
-</body>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <a
+          href="./pages/sales.html"
+          class="bg-[#2606D2] text-white py-4 rounded-xl text-center font-medium hover:opacity-90 transition"
+        >
+          Add Sale
+        </a>
+
+        <a
+          href="./add-expense.html"
+          class="border border-[#2606D2] text-[#2606D2] py-4 rounded-xl text-center font-medium hover:bg-[#2606D210] transition"
+        >
+          Add Expense
+        </a>
+
+        <a
+          href="./chat-ai.html"
+          class="border border-gray-300 py-4 rounded-xl text-center font-medium hover:bg-gray-100 transition"
+        >
+          Ask AI Assistant
+        </a>
+      </div>
+
+      <!-- RECENT ACTIVITY -->
+      <h3 class="text-xl font-semibold mb-3">Recent Activity</h3>
+
+      <div class="bg-white rounded-xl p-5 shadow-sm border">
+        <p class="text-gray-500 text-center py-4">
+          No activity yet — start by adding a sale or expense.
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
