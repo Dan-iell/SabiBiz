@@ -23,74 +23,55 @@
       class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50"
     >
       <div class="w-full px-4 py-4 flex items-center justify-between">
-        <!-- LOGO -->
         <h1 class="text-xl font-bold">
           Sabi<span class="text-[#2606D2]">Biz</span>
         </h1>
         <nav
           class="hidden md:flex items-center gap-5 font-medium text-gray-700"
         >
-          <a href="./dashboard.html" class="hover:text-[#2606D2]">Dashboard</a>
-          <a href="./pages/sales.html" class="hover:text-[#2606D2]">Sales</a>
-          <a href="./pages/expenses.html" class="hover:text-[#2606D2]"
-            >Expenses</a
-          >
-          <a href="./pages/analytics.html" class="hover:text-[#2606D2]"
-            >Analytics</a
-          >
-          <a href="./pages/profile.html" class="hover:text-[#2606D2]"
-            >Profile</a
-          >
-          <a href="./pages/settings.html" class="hover:text-[#2606D2]"
-            >Settings</a
-          >
+          <a href="../dashboard.html" class="hover:text-[#2606D2]">Dashboard</a>
+          <a href="./sales.html" class="text-[#2606D2] font-semibold">Sales</a>
+          <a href="./expenses.html" class="hover:text-[#2606D2]">Expenses</a>
+          <a href="./analytics.html" class="hover:text-[#2606D2]">Analytics</a>
+          <a href="./Ai.html" class="hover:text-[#2606D2]">Sabi-ai</a>
+          <a href="./settings.html" class="hover:text-[#2606D2]">Settings</a>
 
           <a
-            href="./login.html"
+            href="../login.html"
             class="text-red-500 font-semibold hover:underline"
             >Logout</a
           >
         </nav>
 
-        <!-- MOBILE MENU BUTTON -->
         <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">
           ☰
         </button>
       </div>
 
-      <!-- MOBILE MENU -->
       <div
         id="mobileMenu"
         class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md"
       >
-        <a href="./dashboard.html" class="py-2 border-b hover:text-[#2606D2]"
+        <a href="../dashboard.html" class="py-2 border-b hover:text-[#2606D2]"
           >Dashboard</a
         >
-        <a href="./pages/sales.html" class="py-2 border-b hover:text-[#2606D2]"
+        <a href="./sales.html" class="py-2 border-b hover:text-[#2606D2]"
           >Sales</a
         >
-        <a
-          href="./pages/expenses.html"
-          class="py-2 border-b hover:text-[#2606D2]"
+        <a href="./expenses.html" class="py-2 border-b hover:text-[#2606D2]"
           >Expenses</a
         >
-        <a
-          href="./pages/analytics.html"
-          class="py-2 border-b hover:text-[#2606D2]"
+        <a href="./analytics.html" class="py-2 border-b hover:text-[#2606D2]"
           >Analytics</a
         >
-        <a
-          href="./pages/profile.html"
-          class="py-2 border-b hover:text-[#2606D2]"
-          >Profile</a
+        <a href="./Ai.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Sabi-ai</a
         >
-        <a
-          href="./pages/settings.html"
-          class="py-2 border-b hover:text-[#2606D2]"
+        <a href="./settings.html" class="py-2 border-b hover:text-[#2606D2]"
           >Settings</a
         >
         <a
-          href="./login.html"
+          href="../login.html"
           class="py-2 text-red-500 font-semibold hover:underline"
           >Logout</a
         >
@@ -100,7 +81,6 @@
     <main class="px-6 py-6 max-w-4xl mx-auto pt-28">
       <h2 class="text-2xl font-semibold mb-6">Sales</h2>
 
-      <!-- ADD SALE FORM -->
       <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
         <h3 class="text-lg font-semibold mb-4">Add New Sale</h3>
 
@@ -127,6 +107,23 @@
             type="date"
             class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
           />
+
+          <!-- PAYMENT METHOD DROPDOWN -->
+          <div class="sm:col-span-2">
+            <label class="text-sm font-medium text-gray-700 mb-1 block">
+              Payment Method
+            </label>
+
+            <select
+              class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white focus:ring-2 focus:ring-[#2606D2] outline-none"
+              required
+            >
+              <option disabled selected>Select payment method</option>
+              <option value="cash">Cash</option>
+              <option value="transfer">Bank Transfer</option>
+              <option value="card">Debit Card</option>
+            </select>
+          </div>
         </form>
 
         <button
@@ -136,7 +133,6 @@
         </button>
       </div>
 
-      <!-- SALES LIST -->
       <h3 class="text-xl font-semibold mb-4">Recent Sales</h3>
 
       <div
@@ -149,6 +145,7 @@
               <th class="py-3 px-4">Amount</th>
               <th class="py-3 px-4">Quantity</th>
               <th class="py-3 px-4">Date</th>
+              <th class="py-3 px-4">Payment Method</th>
             </tr>
           </thead>
 
@@ -158,6 +155,7 @@
               <td class="py-3 px-4">₦15,000</td>
               <td class="py-3 px-4">1</td>
               <td class="py-3 px-4">2025-10-15</td>
+              <td class="py-3 px-4">Transfer</td>
             </tr>
 
             <tr class="border-b">
@@ -165,6 +163,7 @@
               <td class="py-3 px-4">₦22,000</td>
               <td class="py-3 px-4">1</td>
               <td class="py-3 px-4">2025-10-16</td>
+              <td class="py-3 px-4">Cash</td>
             </tr>
           </tbody>
         </table>
