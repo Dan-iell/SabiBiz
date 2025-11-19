@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>SabiBiz - Sales</title>
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 min-h-screen">
+    <header
+      class="bg-white shadow-sm px-6 py-4 flex justify-between items-center"
+    >
+      <h1 class="text-xl font-bold">
+        Sabi<span class="text-[#2606D2]">Biz</span>
+      </h1>
+      <a
+        href="../login.html"
+        class="text-sm font-medium text-red-500 hover:underline"
+      >
+        Logout
+      </a>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-8">
+      <h2 class="text-2xl font-semibold mb-6">Sales</h2>
+
+      <!-- ADD SALE FORM -->
+      <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
+        <h3 class="text-lg font-semibold mb-4">Add New Sale</h3>
+
+        <form class="grid gap-4 sm:grid-cols-2">
+          <input
+            type="text"
+            placeholder="Item Name"
+            class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+          />
+
+          <input
+            type="number"
+            placeholder="Amount (₦)"
+            class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+          />
+
+          <input
+            type="number"
+            placeholder="Quantity"
+            class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+          />
+
+          <input
+            type="date"
+            class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+          />
+        </form>
+
+        <button
+          class="mt-5 w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition"
+        >
+          Save Sale
+        </button>
+      </div>
+
+      <!-- SALES LIST -->
+      <h3 class="text-xl font-semibold mb-4">Recent Sales</h3>
+
+      <div
+        class="bg-white rounded-xl shadow-sm border overflow-x-auto rounded-lg"
+      >
+        <table class="min-w-full text-left">
+          <thead class="bg-gray-100 text-gray-600 text-sm">
+            <tr>
+              <th class="py-3 px-4">Item</th>
+              <th class="py-3 px-4">Amount</th>
+              <th class="py-3 px-4">Quantity</th>
+              <th class="py-3 px-4">Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="border-b">
+              <td class="py-3 px-4 whitespace-normal">Ankara Dress</td>
+              <td class="py-3 px-4">₦15,000</td>
+              <td class="py-3 px-4">1</td>
+              <td class="py-3 px-4">2025-10-15</td>
+            </tr>
+
+            <tr class="border-b">
+              <td class="py-3 px-4 whitespace-normal">Sneakers</td>
+              <td class="py-3 px-4">₦22,000</td>
+              <td class="py-3 px-4">1</td>
+              <td class="py-3 px-4">2025-10-16</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
