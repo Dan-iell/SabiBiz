@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Plus Jakarta Sans -->
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -23,51 +21,98 @@
   </head>
 
   <body class="bg-gray-50 text-gray-900 min-h-screen">
-    <!-- NAVBAR (fixed) -->
-    <header class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50">
+    <header
+      class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50"
+    >
       <div class="w-full px-4 py-4 flex items-center justify-between">
         <h1 class="text-xl font-bold">
           Sabi<span class="text-[#2606D2]">Biz</span>
         </h1>
 
-        <nav class="hidden md:flex items-center gap-5 font-medium text-gray-700">
+        <nav
+          class="hidden md:flex items-center gap-5 font-medium text-gray-700"
+        >
           <a href="../dashboard.html" class="hover:text-[#2606D2]">Dashboard</a>
           <a href="./sales.html" class="hover:text-[#2606D2]">Sales</a>
           <a href="./expenses.html" class="hover:text-[#2606D2]">Expenses</a>
           <a href="./analytics.html" class="hover:text-[#2606D2]">Analytics</a>
           <a href="./Ai.html" class="text-[#2606D2] font-semibold">Sabi-ai</a>
           <a href="./settings.html" class="hover:text-[#2606D2]">Settings</a>
-          <a href="../login.html" class="text-red-500 font-semibold hover:underline">Logout</a>
+          <a
+            href="../login.html"
+            class="text-red-500 font-semibold hover:underline"
+            >Logout</a
+          >
         </nav>
 
-        <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
+        <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">
+          ☰
+        </button>
       </div>
 
       <!-- MOBILE MENU -->
-      <div id="mobileMenu" class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md">
-        <a href="../dashboard.html" class="py-2 border-b hover:text-[#2606D2]">Dashboard</a>
-        <a href="./sales.html" class="py-2 border-b hover:text-[#2606D2]">Sales</a>
-        <a href="./expenses.html" class="py-2 border-b hover:text-[#2606D2]">Expenses</a>
-        <a href="./analytics.html" class="py-2 border-b text-[#2606D2] font-semibold">Analytics</a>
-        <a href="./Ai.html" class="py-2 border-b hover:text-[#2606D2]">Sabi-ai</a>
-        <a href="./settings.html" class="py-2 border-b hover:text-[#2606D2]">Settings</a>
-        <a href="../login.html" class="py-2 text-red-500 font-semibold hover:underline">Logout</a>
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md"
+      >
+        <a href="../dashboard.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Dashboard</a
+        >
+        <a href="./sales.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Sales</a
+        >
+        <a href="./expenses.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Expenses</a
+        >
+        <a
+          href="./analytics.html"
+          class="py-2 border-b text-[#2606D2] font-semibold"
+          >Analytics</a
+        >
+        <a href="./Ai.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Sabi-ai</a
+        >
+        <a href="./settings.html" class="py-2 border-b hover:text-[#2606D2]"
+          >Settings</a
+        >
+        <a
+          href="../login.html"
+          class="py-2 text-red-500 font-semibold hover:underline"
+          >Logout</a
+        >
       </div>
     </header>
 
-    <!-- MAIN -->
     <main class="px-4 pt-28 pb-10 max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-2">AI Business Assistant</h2>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold">AI Business Assistant</h2>
+
+        <a
+          href="#"
+          class="px-4 py-2 rounded-xl text-white font-medium bg-gradient-to-r to-[#25D366] from-blue-600 hover:opacity-90 transition"
+        >
+          Link to WhatsApp
+        </a>
+      </div>
+
       <p class="text-gray-600 mb-6">
-        Ask Sabi-ai to analyse your sales, track expenses, or summarise your week.
+        Ask Sabi-ai to analyse your sales, track expenses, or summarise your
+        week.
       </p>
 
-      <div class="bg-white rounded-2xl shadow-sm border p-4 sm:p-6 flex flex-col h-[70vh]">
+      <div
+        class="bg-white rounded-2xl shadow-sm border p-4 sm:p-6 flex flex-col h-[70vh]"
+      >
         <div id="chatMessages" class="flex-1 overflow-y-auto space-y-4 pr-1">
-          <!-- Initial Bot Message -->
           <div class="flex items-start gap-3">
-            <div class="w-9 h-9 rounded-full bg-[#2606D2] text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">SB</div>
-            <div class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
+            <div
+              class="px-4 py-2 rounded-xl text-white font-medium bg-gradient-to-r from-[#25D366] to-blue-600 hover:opacity-90 transition"
+            >
+              SB
+            </div>
+            <div
+              class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]"
+            >
               <p class="text-sm text-gray-800">
                 Hi, I’m your SabiBiz assistant 👋. You can ask things like:
               </p>
@@ -81,130 +126,143 @@
         </div>
 
         <!-- INPUT AREA -->
-        <form id="chatForm" class="mt-4 flex items-center gap-3 border border-gray-200 rounded-2xl px-3 py-2">
+        <form
+          id="chatForm"
+          class="mt-4 flex items-center gap-3 border border-gray-200 rounded-2xl px-3 py-2"
+        >
           <input
             type="text"
             id="userInput"
             placeholder="Ask SabiBiz anything about your business..."
             class="flex-1 border-none outline-none text-sm sm:text-base"
           />
-          <button type="submit" class="bg-[#2606D2] text-white text-sm sm:text-base font-medium px-4 py-2 rounded-xl hover:opacity-90 transition">
+          <button
+            type="submit"
+            class="bg-[#2606D2] text-white text-sm sm:text-base font-medium px-4 py-2 rounded-xl hover:opacity-90 transition"
+          >
             Send
           </button>
         </form>
       </div>
     </main>
 
-    <!-- SCRIPT -->
     <script>
-  // --- MOBILE MENU ---
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden")
+      );
 
-// --- SALES & EXPENSES ---
-let sales = JSON.parse(localStorage.getItem("salesData")) || [];
-let expenses = JSON.parse(localStorage.getItem("expensesData")) || [];
+      // --- SALES & EXPENSES ---
+      let sales = JSON.parse(localStorage.getItem("salesData")) || [];
+      let expenses = JSON.parse(localStorage.getItem("expensesData")) || [];
 
-// Ensure numeric amounts
-sales = sales.map(s => typeof s === "number" ? s : (s.amount || 0));
-expenses = expenses.map(e => typeof e === "number" ? e : (e.amount || 0));
+      // Ensure numeric amounts
+      sales = sales.map((s) => (typeof s === "number" ? s : s.amount || 0));
+      expenses = expenses.map((e) =>
+        typeof e === "number" ? e : e.amount || 0
+      );
 
-// FUNCTIONS
-function getTotalSales() {
-  return sales.reduce((sum, s) => sum + s, 0);
-}
-function getTotalExpenses() {
-  return expenses.reduce((sum, e) => sum + e, 0);
-}
-function getProfit() {
-  return getTotalSales() - getTotalExpenses();
-}
-function getTopSellingProduct() {
-  if (!sales.length) return "None yet";
-  const productMap = {};
-  sales.forEach(s => {
-    const name = typeof s === "object" ? s.product || "Unknown" : "Unknown";
-    const amount = typeof s === "object" ? s.amount : s;
-    productMap[name] = (productMap[name] || 0) + amount;
-  });
-  return Object.entries(productMap).sort((a,b) => b[1]-a[1])[0][0];
-}
+      // FUNCTIONS
+      function getTotalSales() {
+        return sales.reduce((sum, s) => sum + s, 0);
+      }
+      function getTotalExpenses() {
+        return expenses.reduce((sum, e) => sum + e, 0);
+      }
+      function getProfit() {
+        return getTotalSales() - getTotalExpenses();
+      }
+      function getTopSellingProduct() {
+        if (!sales.length) return "None yet";
+        const productMap = {};
+        sales.forEach((s) => {
+          const name =
+            typeof s === "object" ? s.product || "Unknown" : "Unknown";
+          const amount = typeof s === "object" ? s.amount : s;
+          productMap[name] = (productMap[name] || 0) + amount;
+        });
+        return Object.entries(productMap).sort((a, b) => b[1] - a[1])[0][0];
+      }
 
-// --- CHAT HISTORY ---
-const chatMessages = document.getElementById("chatMessages");
-const chatForm = document.getElementById("chatForm");
-const userInput = document.getElementById("userInput");
+      // --- CHAT HISTORY ---
+      const chatMessages = document.getElementById("chatMessages");
+      const chatForm = document.getElementById("chatForm");
+      const userInput = document.getElementById("userInput");
 
-let chatHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
+      let chatHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
 
-// Render chat from history
-function renderChat() {
-  chatMessages.innerHTML = "";
-  chatHistory.forEach(item => {
-    const div = document.createElement("div");
-    if(item.sender === "user") {
-      div.className = "flex items-start gap-3 justify-end";
-      div.innerHTML = `<div class="bg-[#2606D2] text-white rounded-2xl rounded-br-none px-4 py-3 max-w-[80%]"><p class="text-sm">${item.text}</p></div>`;
-    } else {
-      div.className = "flex items-start gap-3";
-      div.innerHTML = `<div class="w-9 h-9 rounded-full bg-[#2606D2] text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">SB</div>
+      // Render chat from history
+      function renderChat() {
+        chatMessages.innerHTML = "";
+        chatHistory.forEach((item) => {
+          const div = document.createElement("div");
+          if (item.sender === "user") {
+            div.className = "flex items-start gap-3 justify-end";
+            div.innerHTML = `<div class="bg-[#2606D2] text-white rounded-2xl rounded-br-none px-4 py-3 max-w-[80%]"><p class="text-sm">${item.text}</p></div>`;
+          } else {
+            div.className = "flex items-start gap-3";
+            div.innerHTML = `<div class="w-9 h-9 rounded-full bg-[#2606D2] text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">SB</div>
       <div class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]"><p class="text-sm text-gray-800">${item.text}</p></div>`;
-    }
-    chatMessages.appendChild(div);
-  });
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-renderChat();
+          }
+          chatMessages.appendChild(div);
+        });
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      renderChat();
 
-// --- LOCAL STORAGE RESPONSE ---
-function generateResponse(msg) {
-  msg = msg.toLowerCase();
-  if (msg.includes("total sales")) return `Your total sales are ₦${getTotalSales().toLocaleString()}.`;
-  if (msg.includes("profit")) return `Your profit is ₦${getProfit().toLocaleString()}.`;
-  if (msg.includes("expenses")) return `Your total expenses are ₦${getTotalExpenses().toLocaleString()}.`;
-  if (msg.includes("top selling") || msg.includes("best selling")) return `Your top-selling product is ${getTopSellingProduct()}.`;
-  return null; // unknown question
-}
+      // --- LOCAL STORAGE RESPONSE ---
+      function generateResponse(msg) {
+        msg = msg.toLowerCase();
+        if (msg.includes("total sales"))
+          return `Your total sales are ₦${getTotalSales().toLocaleString()}.`;
+        if (msg.includes("profit"))
+          return `Your profit is ₦${getProfit().toLocaleString()}.`;
+        if (msg.includes("expenses"))
+          return `Your total expenses are ₦${getTotalExpenses().toLocaleString()}.`;
+        if (msg.includes("top selling") || msg.includes("best selling"))
+          return `Your top-selling product is ${getTopSellingProduct()}.`;
+        return null; // unknown question
+      }
 
-// --- CHAT SUBMIT ---
-chatForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const msg = userInput.value.trim();
-  if (!msg) return;
+      // --- CHAT SUBMIT ---
+      chatForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const msg = userInput.value.trim();
+        if (!msg) return;
 
-  // Save user message
-  chatHistory.push({ sender: "user", text: msg });
-  localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
-  renderChat();
-  userInput.value = "";
+        // Save user message
+        chatHistory.push({ sender: "user", text: msg });
+        localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+        renderChat();
+        userInput.value = "";
 
-  // BOT THINKING PLACEHOLDER
-  const botDiv = document.createElement("div");
-  botDiv.className = "flex items-start gap-3";
-  botDiv.innerHTML = `<div class="w-9 h-9 rounded-full bg-[#2606D2] text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">SB</div>
+        // BOT THINKING PLACEHOLDER
+        const botDiv = document.createElement("div");
+        botDiv.className = "flex items-start gap-3";
+        botDiv.innerHTML = `<div class="w-9 h-9 rounded-full bg-[#2606D2] text-white flex items-center justify-center text-sm font-semibold flex-shrink-0">SB</div>
   <div class="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]"><p class="text-sm text-gray-800">...</p></div>`;
-  chatMessages.appendChild(botDiv);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+        chatMessages.appendChild(botDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
 
-  // Simulate response delay
-  setTimeout(() => {
-    let botMsg = generateResponse(msg);
+        // Simulate response delay
+        setTimeout(() => {
+          let botMsg = generateResponse(msg);
 
-    // Friendly fallback for unknown questions
-    if (!botMsg) {
-      botMsg = "Sorry, I cannot answer that right now. You can ask about total sales, profit, expenses, or top-selling product.";
-    }
+          // Friendly fallback for unknown questions
+          if (!botMsg) {
+            botMsg =
+              "Sorry, I cannot answer that right now. You can ask about total sales, profit, expenses, or top-selling product.";
+          }
 
-    botDiv.querySelector("p").textContent = botMsg;
+          botDiv.querySelector("p").textContent = botMsg;
 
-    // Save bot message
-    chatHistory.push({ sender: "bot", text: botMsg });
-    localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }, 500);
-});
-
+          // Save bot message
+          chatHistory.push({ sender: "bot", text: botMsg });
+          localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 500);
+      });
     </script>
   </body>
 </html>
