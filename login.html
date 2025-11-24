@@ -8,9 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <title>SabiBiz - Login</title>
-
     <style>
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
@@ -18,9 +16,15 @@
     </style>
   </head>
 
-  <body
-    class="bg-white text-gray-900 flex items-center justify-center min-h-screen px-6"
-  >
+  <body class="bg-white text-gray-900 flex items-center justify-center min-h-screen px-6">
+    <!-- Popup Modal -->
+    <div id="popup" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+      <div class="bg-white w-80 rounded-2xl p-6 text-center shadow-xl">
+        <p id="popupMessage" class="text-gray-800 text-lg font-semibold mb-4"></p>
+        <button onclick="closePopup()" class="bg-[#2606D2] text-white w-full py-2 rounded-xl">OK</button>
+      </div>
+    </div>
+
     <main class="w-full max-w-sm">
       <h1 class="text-3xl font-extrabold tracking-tight mb-2 text-center">
         Sabi<span class="text-[#2606D2]">Biz</span>
@@ -31,6 +35,7 @@
 
       <section class="flex flex-col gap-4 mb-6">
         <input
+          id="email"
           type="email"
           placeholder="Email"
           class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
@@ -38,26 +43,26 @@
         />
 
         <input
+          id="password"
           type="password"
           placeholder="Password"
           class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
           required
         />
       </section>
-      <a href="./dashboard.html"><button
-        class="w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition"
-      >
+
+      <button id="loginBtn" class="w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition">
         Login
-      </button></a>
+      </button>
+
       <p class="text-center text-gray-600 mt-4">
         Don’t have an account?
-        <a
-          href="./sign-up.html"
-          class="text-[#2606D2] font-medium hover:underline"
-        >
-          Sign up
-        </a>
+        <a href="./sign-up.html" class="text-[#2606D2] font-medium hover:underline">Sign up</a>
       </p>
     </main>
+
+    <script src="login.js">
+    
+    </script>
   </body>
 </html>

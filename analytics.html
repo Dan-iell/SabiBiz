@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>SabiBiz - Analytics</title>
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 min-h-screen">
+    <!-- POPUP MODAL -->
+    <div id="popup" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+      <div class="bg-white w-80 rounded-2xl p-6 text-center shadow-xl">
+        <p id="popupMessage" class="text-gray-800 text-lg font-semibold mb-4"></p>
+        <button onclick="closePopup()" class="bg-[#2606D2] text-white w-full py-2 rounded-xl">OK</button>
+      </div>
+    </div>
+
+    <header class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50">
+      <div class="w-full px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">
+          Sabi<span class="text-[#2606D2]">Biz</span>
+        </h1>
+
+        <nav class="hidden md:flex items-center gap-5 font-medium text-gray-700">
+          <a href="../dashboard.html" class="hover:text-[#2606D2]">Dashboard</a>
+          <a href="./sales.html" class="hover:text-[#2606D2]">Sales</a>
+          <a href="./expenses.html" class="hover:text-[#2606D2]">Expenses</a>
+          <a href="./analytics.html" class="text-[#2606D2] font-semibold">Analytics</a>
+          <a href="./Ai.html" class="hover:text-[#2606D2]">Sabi-ai</a>
+          <a href="./settings.html" class="hover:text-[#2606D2]">Settings</a>
+          <a href="../login.html" class="text-red-500 font-semibold hover:underline">Logout</a>
+        </nav>
+
+        <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu" class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md">
+        <a href="../dashboard.html" class="py-2 border-b hover:text-[#2606D2]">Dashboard</a>
+        <a href="./sales.html" class="py-2 border-b hover:text-[#2606D2]">Sales</a>
+        <a href="./expenses.html" class="py-2 border-b hover:text-[#2606D2]">Expenses</a>
+        <a href="./analytics.html" class="py-2 border-b text-[#2606D2] font-semibold">Analytics</a>
+        <a href="./Ai.html" class="py-2 border-b hover:text-[#2606D2]">Sabi-ai</a>
+        <a href="./settings.html" class="py-2 border-b hover:text-[#2606D2]">Settings</a>
+        <a href="../login.html" class="py-2 text-red-500 font-semibold hover:underline">Logout</a>
+      </div>
+    </header>
+
+    <main class="px-6 py-6 max-w-4xl mx-auto pt-28">
+      <h2 class="text-2xl font-semibold mb-6">Analytics</h2>
+
+      <!-- SUMMARY CARDS -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Sales (This Week)</p>
+          <h3 id="salesAmount" class="text-2xl font-bold mt-1">₦0</h3>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Expenses (This Week)</p>
+          <h3 id="expensesAmount" class="text-2xl font-bold mt-1">₦0</h3>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl shadow-sm border">
+          <p class="text-sm text-gray-500">Profit (This Week)</p>
+          <h3 id="profitAmount" class="text-2xl font-bold mt-1">₦0</h3>
+        </div>
+      </div>
+
+      <!-- PIE CHART -->
+      <h3 class="text-xl font-semibold mb-4">Profit vs Expenses</h3>
+      <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
+        <canvas id="pieChart" class="w-full h-56"></canvas>
+      </div>
+
+      <!-- SALES TREND -->
+      <h3 class="text-xl font-semibold mb-4">Sales Trend</h3>
+      <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
+        <canvas id="salesChart" class="w-full h-52"></canvas>
+      </div>
+
+      <!-- EXPENSES TREND -->
+      <h3 class="text-xl font-semibold mb-4">Expenses Trend</h3>
+      <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
+        <canvas id="expensesChart" class="w-full h-52"></canvas>
+      </div>
+    </main>
+
+    <script src="analytics.js">
+      
+    </script>
+  </body>
+</html>

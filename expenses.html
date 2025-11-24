@@ -113,12 +113,13 @@
       <section class="bg-white border rounded-xl p-5 mb-8">
         <h3 class="font-semibold mb-4 text-sm">Add New Expense</h3>
 
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form id="expenseForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div class="md:col-span-2">
             <label class="block text-xs font-medium text-gray-600 mb-1">
               Description
             </label>
             <input
+              id="desc"
               type="text"
               placeholder="E.g. Shop rent, logistics, ads"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2606D2] outline-none"
@@ -131,6 +132,7 @@
               Amount (₦)
             </label>
             <input
+              id="amount"
               type="number"
               placeholder="0.00"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2606D2] outline-none"
@@ -143,6 +145,7 @@
               Category
             </label>
             <select
+              id="category"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm bg-white focus:ring-2 focus:ring-[#2606D2] outline-none"
               required
             >
@@ -160,6 +163,7 @@
               Date
             </label>
             <input
+              id="date"
               type="date"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#2606D2] outline-none"
               required
@@ -184,12 +188,17 @@
           <span class="text-xs text-gray-500">This week</span>
         </div>
 
-        <div class="space-y-3 text-sm">
+        <div id="expenseList" class="space-y-3 text-sm">
           <p class="text-gray-500 text-center py-4">
             No expenses recorded yet.
           </p>
         </div>
       </section>
     </main>
+
+    <!-- JS SCRIPT -->
+    <script src="expenses.js">
+      
+    </script>
   </body>
 </html>

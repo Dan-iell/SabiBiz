@@ -18,16 +18,24 @@
     </style>
   </head>
 
-  <body
-    class="bg-white text-gray-900 flex items-center justify-center min-h-screen px-6"
-  >
+  <body class="bg-white text-gray-900 flex items-center justify-center min-h-screen px-6">
+    <!-- Popup Modal -->
+    <div id="popup" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
+      <div class="bg-white w-80 rounded-2xl p-6 text-center shadow-xl">
+        <p id="popupMessage" class="text-gray-800 text-lg font-semibold mb-4"></p>
+        <button onclick="closePopup()" class="bg-[#2606D2] text-white w-full py-2 rounded-xl">OK</button>
+      </div>
+    </div>
+
     <main class="w-full max-w-sm">
       <h1 class="text-3xl font-extrabold tracking-tight mb-2 text-center">
         Sabi<span class="text-[#2606D2]">Biz</span>
       </h1>
       <p class="text-center text-gray-600 mb-8">Create your account</p>
+
       <section class="flex flex-col gap-4 mb-6">
         <input
+          id="fullname"
           type="text"
           placeholder="Full Name"
           class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
@@ -35,6 +43,7 @@
         />
 
         <input
+          id="email"
           type="email"
           placeholder="Email"
           class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
@@ -42,27 +51,26 @@
         />
 
         <input
+          id="password"
           type="password"
           placeholder="Enter Password"
           class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
           required
         />
       </section>
-      <button
-        type="submit"
-        class="w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition"
-      >
+
+      <button id="signupBtn" class="w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition">
         Create Account
       </button>
+
       <p class="text-center text-gray-600 mt-4">
         Already have an account?
-        <a
-          href="./login.html"
-          class="text-[#2606D2] font-medium hover:underline"
-        >
-          Login
-        </a>
+        <a href="./login.html" class="text-[#2606D2] font-medium hover:underline">Login</a>
       </p>
     </main>
+
+    <script src="sign-up.js">
+      
+    </script>
   </body>
 </html>

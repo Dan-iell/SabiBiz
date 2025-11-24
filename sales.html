@@ -84,28 +84,36 @@
       <div class="bg-white p-6 rounded-xl shadow-sm border mb-10">
         <h3 class="text-lg font-semibold mb-4">Add New Sale</h3>
 
-        <form class="grid gap-4 sm:grid-cols-2">
+        <form id="salesForm" class="grid gap-4 sm:grid-cols-2">
           <input
+            id="item"
             type="text"
             placeholder="Item Name"
             class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+            required
           />
 
           <input
+            id="amount"
             type="number"
             placeholder="Amount (₦)"
             class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+            required
           />
 
           <input
+            id="quantity"
             type="number"
             placeholder="Quantity"
             class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+            required
           />
 
           <input
+            id="date"
             type="date"
             class="border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#2606D2] outline-none"
+            required
           />
 
           <!-- PAYMENT METHOD DROPDOWN -->
@@ -115,18 +123,20 @@
             </label>
 
             <select
+              id="paymentMethod"
               class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white focus:ring-2 focus:ring-[#2606D2] outline-none"
               required
             >
-              <option disabled selected>Select payment method</option>
-              <option value="cash">Cash</option>
-              <option value="transfer">Bank Transfer</option>
-              <option value="card">Debit Card</option>
+              <option disabled selected value="">Select payment method</option>
+              <option value="Cash">Cash</option>
+              <option value="Transfer">Bank Transfer</option>
+              <option value="Card">Debit Card</option>
             </select>
           </div>
         </form>
 
         <button
+          id="saveBtn"
           class="mt-5 w-full bg-[#2606D2] text-white py-3 rounded-xl font-medium hover:opacity-90 transition"
         >
           Save Sale
@@ -135,10 +145,8 @@
 
       <h3 class="text-xl font-semibold mb-4">Recent Sales</h3>
 
-      <div
-        class="bg-white rounded-xl shadow-sm border overflow-x-auto rounded-lg"
-      >
-        <table class="min-w-full text-left">
+      <div class="bg-white rounded-xl shadow-sm border overflow-x-auto rounded-lg">
+        <table class="min-w-full text-left" id="salesTable">
           <thead class="bg-gray-100 text-gray-600 text-sm">
             <tr>
               <th class="py-3 px-4">Item</th>
@@ -149,7 +157,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="salesBody">
             <tr class="border-b">
               <td class="py-3 px-4 whitespace-normal">Ankara Dress</td>
               <td class="py-3 px-4">₦15,000</td>
@@ -169,5 +177,10 @@
         </table>
       </div>
     </main>
+
+    <!-- JS -->
+    <script src="sales.js">
+      
+    </script>
   </body>
 </html>

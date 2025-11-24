@@ -8,7 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <title>SabiBiz - Dashboard</title>
 
     <style>
@@ -20,73 +19,63 @@
 
   <body class="bg-gray-50 min-h-screen text-gray-900">
     <!-- NAVBAR -->
-    <!-- NAVBAR -->
-<!-- NAVBAR -->
-<header class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50">
-  <div class="w-full px-4 py-4 flex items-center justify-between">
+    <header class="fixed top-0 left-0 w-full bg-black/20 backdrop-blur-lg shadow-sm z-50">
+      <div class="w-full px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">
+          Sabi<span class="text-[#2606D2]">Biz</span>
+        </h1>
 
-    <!-- LOGO -->
-    <h1 class="text-xl font-bold">
-      Sabi<span class="text-[#2606D2]">Biz</span>
-    </h1>
+        <nav class="hidden md:flex items-center gap-5 font-medium text-gray-700">
+          <a href="./dashboard.html" class="text-[#2606D2] font-semibold">Dashboard</a>
+          <a href="./pages/sales.html" class="hover:text-[#2606D2]">Sales</a>
+          <a href="./pages/expenses.html" class="hover:text-[#2606D2]">Expenses</a>
+          <a href="./pages/analytics.html" class="hover:text-[#2606D2]">Analytics</a>
+          <a href="./pages/Ai.html" class="hover:text-[#2606D2]">Sabi-ai</a>
+          <a href="./pages/settings.html" class="hover:text-[#2606D2]">Settings</a>
+          <a href="./login.html" class="text-red-500 font-semibold hover:underline">Logout</a>
+        </nav>
 
-    <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex items-center gap-5 font-medium text-gray-700">
-      <a href="./dashboard.html" class="text-[#2606D2] font-semibold">Dashboard</a>
-      <a href="./pages/sales.html" class="hover:text-[#2606D2]">Sales</a>
-      <a href="./pages/expenses.html" class="hover:text-[#2606D2]">Expenses</a>
-      <a href="./pages/analytics.html" class="hover:text-[#2606D2]">Analytics</a>
-      <a href="./pages/Ai.html" class="hover:text-[#2606D2]">Sabi-ai</a>
-      <a href="./pages/settings.html" class="hover:text-[#2606D2]">Settings</a>
+        <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">☰</button>
+      </div>
 
-      <a href="./login.html" class="text-red-500 font-semibold hover:underline">Logout</a>
-    </nav>
-
-    <!-- MOBILE MENU BUTTON -->
-    <button id="menuBtn" class="md:hidden text-2xl focus:outline-none">
-      ☰
-    </button>
-
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md">
-    <a href="./dashboard.html" class="py-2 border-b hover:text-[#2606D2]">Dashboard</a>
-    <a href="./pages/sales.html" class="py-2 border-b hover:text-[#2606D2]">Sales</a>
-    <a href="./pages/expenses.html" class="py-2 border-b hover:text-[#2606D2]">Expenses</a>
-    <a href="./pages/analytics.html" class="py-2 border-b hover:text-[#2606D2]">Analytics</a>
-    <a href="./pages/Ai.html" class="py-2 border-b hover:text-[#2606D2]">Sabi-ai</a>
-    <a href="./pages/settings.html" class="py-2 border-b hover:text-[#2606D2]">Settings</a>
-    <a href="./login.html" class="py-2 text-red-500 font-semibold hover:underline">Logout</a>
-  </div>
-</header>
-
-
+      <div id="mobileMenu" class="md:hidden hidden flex-col bg-black/20 backdrop-blur-lg px-6 pb-4 shadow-md">
+        <a href="./dashboard.html" class="py-2 border-b hover:text-[#2606D2]">Dashboard</a>
+        <a href="./pages/sales.html" class="py-2 border-b hover:text-[#2606D2]">Sales</a>
+        <a href="./pages/expenses.html" class="py-2 border-b hover:text-[#2606D2]">Expenses</a>
+        <a href="./pages/analytics.html" class="py-2 border-b hover:text-[#2606D2]">Analytics</a>
+        <a href="./pages/Ai.html" class="py-2 border-b hover:text-[#2606D2]">Sabi-ai</a>
+        <a href="./pages/settings.html" class="py-2 border-b hover:text-[#2606D2]">Settings</a>
+        <a href="./login.html" class="py-2 text-red-500 font-semibold hover:underline">Logout</a>
+      </div>
+    </header>
 
     <!-- MAIN CONTENT -->
     <main class="px-6 py-6 max-w-4xl mx-auto pt-28">
-      <h2 class="text-2xl font-semibold mb-5">Dashboard Overview</h2>
+      
+      <!-- WELCOME -->
+      <h2 id="welcomeMsg" class="text-2xl font-semibold mb-5">Dashboard Overview</h2>
 
       <!-- SUMMARY CARDS -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+
+        <!-- FIXED: Total Sales -->
         <div class="bg-white p-5 rounded-xl shadow-sm border">
           <p class="text-sm text-gray-500">Total Sales</p>
-          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+          <h3 id="totalSales" class="text-2xl font-bold mt-1">₦0.00</h3>
         </div>
 
-        <!-- Expenses -->
+        <!-- FIXED: Total Expenses -->
         <div class="bg-white p-5 rounded-xl shadow-sm border">
           <p class="text-sm text-gray-500">Total Expenses</p>
-          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+          <h3 id="totalExpenses" class="text-2xl font-bold mt-1">₦0.00</h3>
         </div>
 
-        <!-- Profit -->
+        <!-- FIXED: Profit (new correct id="profit") -->
         <div class="bg-white p-5 rounded-xl shadow-sm border">
           <p class="text-sm text-gray-500">Profit</p>
-          <h3 class="text-2xl font-bold mt-1">₦0.00</h3>
+          <h3 id="profit" class="text-2xl font-bold mt-1">₦0.00</h3>
         </div>
 
-        <!-- Best Product -->
         <div class="bg-white p-5 rounded-xl shadow-sm border">
           <p class="text-sm text-gray-500">Best Selling Product</p>
           <h3 class="text-xl font-semibold mt-1">None yet</h3>
@@ -95,37 +84,103 @@
 
       <!-- QUICK ACTIONS -->
       <h3 class="text-xl font-semibold mb-3">Quick Actions</h3>
-
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <a
-          href="./pages/sales.html"
-          class="bg-[#2606D2] text-white py-4 rounded-xl text-center font-medium hover:opacity-90 transition"
-        >
+        <a href="./pages/sales.html"
+          class="bg-[#2606D2] text-white py-4 rounded-xl text-center font-medium hover:opacity-90 transition">
           Add Sale
         </a>
 
-        <a
-          href="./pages/expenses.html"
-          class="border border-[#2606D2] text-[#2606D2] py-4 rounded-xl text-center font-medium hover:bg-[#2606D210] transition"
-        >
+        <a href="./pages/expenses.html"
+          class="border border-[#2606D2] text-[#2606D2] py-4 rounded-xl text-center font-medium hover:bg-[#2606D210] transition">
           Add Expense
         </a>
 
-        <a
-          href="./pages/Ai.html"
-          class="border border-gray-300 py-4 rounded-xl text-center font-medium hover:bg-gray-100 transition"
-        >
+        <a href="./pages/Ai.html"
+          class="border border-gray-300 py-4 rounded-xl text-center font-medium hover:bg-gray-100 transition">
           Ask AI Assistant
         </a>
       </div>
 
       <h3 class="text-xl font-semibold mb-3">Recent Activity</h3>
-
       <div class="bg-white rounded-xl p-5 shadow-sm border">
-        <p class="text-gray-500 text-center py-4">
-          No activity yet — start by adding a sale or expense.
-        </p>
+        <div id="activityList" class="space-y-3 text-gray-700"></div>
+
       </div>
     </main>
+
+    <!-- JS -->
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Load username
+      const userName = localStorage.getItem("userName") || "Guest";
+      document.getElementById("welcomeMsg").textContent = `Welcome, ${userName}!`;
+
+      // Load sales & expenses from localStorage
+      const sales = JSON.parse(localStorage.getItem("salesData")) || [];
+      const expenses = JSON.parse(localStorage.getItem("expensesData")) || [];
+
+      const totalSales = sales.reduce((a, b) => a + b.amount, 0);
+      const totalExpenses = expenses.reduce((a, b) => a + b.amount, 0);
+      const profit = totalSales - totalExpenses;
+
+      // Update UI
+      document.getElementById("totalSales").textContent = "₦" + totalSales.toLocaleString();
+      document.getElementById("totalExpenses").textContent = "₦" + totalExpenses.toLocaleString();
+      document.getElementById("profit").textContent = "₦" + profit.toLocaleString();
+      // ---------------- RECENT ACTIVITY ----------------
+
+// Load sales & expenses objects
+let salesData = JSON.parse(localStorage.getItem("salesData")) || [];
+let expensesData = JSON.parse(localStorage.getItem("expensesData")) || [];
+
+// Combine both and tag type
+let recent = [
+  ...salesData.map(s => ({ ...s, type: "sale" })),
+  ...expensesData.map(e => ({ ...e, type: "expense" }))
+];
+
+// Sort by newest
+recent.sort((a, b) => (b.time || 0) - (a.time || 0));
+
+// Get activity container
+const activityList = document.getElementById("activityList");
+
+// If nothing exists
+if (recent.length === 0) {
+  activityList.innerHTML = `
+    <p class="text-gray-500 text-center py-4">
+      No activity yet — start by adding a sale or expense.
+    </p>
+  `;
+} else {
+  // Render last 5 activities
+  recent.slice(0, 5).forEach(item => {
+    const row = document.createElement("div");
+    row.className = "flex items-center justify-between bg-gray-100 p-3 rounded-xl";
+
+    const label = item.type === "sale" ? "Sale" : "Expense";
+    const color = item.type === "sale" ? "#2606D2" : "#FF3B30";
+
+    row.innerHTML = `
+      <div>
+        <p class="font-semibold">${label}: ₦${Number(item.amount).toLocaleString()}</p>
+        <p class="text-sm text-gray-500">${item.date || "No date"}</p>
+      </div>
+      <span class="text-sm font-medium" style="color: ${color};">
+        ${item.type === "sale" ? "+" : "-"}₦${Number(item.amount).toLocaleString()}
+      </span>
+    `;
+
+    activityList.appendChild(row);
+  });
+}
+
+    </script>
   </body>
 </html>
